@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light mode Clerk variables */
+:root {
+  --clerk-card-bg: #ffffff;
+  --clerk-border-color: #e5e7eb;
+  --clerk-text-primary: #111827;
+  --clerk-text-secondary: #6b7280;
+  --clerk-button-bg: #111827;
+  --clerk-button-text: #ffffff;
+  --clerk-button-hover: #374151;
+  --clerk-input-bg: #f9fafb;
+  --clerk-social-bg: #f9fafb;
+  --clerk-social-hover: #f3f4f6;
+  --clerk-link-color: #111827;
+  --clerk-link-hover: #374151;
+  --clerk-focus-border: #111827;
+}
+
+/* Dark mode Clerk variables */
+html.dark {
+  --clerk-card-bg: #1f2937;
+  --clerk-border-color: #374151;
+  --clerk-text-primary: #f9fafb;
+  --clerk-text-secondary: #9ca3af;
+  --clerk-button-bg: #f9fafb;
+  --clerk-button-text: #1f2937;
+  --clerk-button-hover: #e5e7eb;
+  --clerk-input-bg: #374151;
+  --clerk-social-bg: #374151;
+  --clerk-social-hover: #4b5563;
+  --clerk-link-color: #f9fafb;
+  --clerk-link-hover: #d1d5db;
+  --clerk-focus-border: #f9fafb;
+}
+
+/* Base styles for the body */
+body {
+  @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300;
+}
